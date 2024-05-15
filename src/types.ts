@@ -79,7 +79,7 @@ export interface Options {
   /**
    * Defaults components files paths
    */
-  defaults?: string[]
+  defaultsMap?: Record<string, ComponentInfo>
   /**
    * Valid file extensions for components.
    * @default ['vue']

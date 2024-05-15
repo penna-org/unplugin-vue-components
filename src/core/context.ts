@@ -41,7 +41,6 @@ export class Context {
     this.options = resolveOptions(rawOptions, this.root)
     this.generateDeclaration = throttle(500, this._generateDeclaration.bind(this), { noLeading: false })
     this.setTransformer(this.options.transformer)
-    this.setDefaults()
   }
 
   setRoot(root: string) {
@@ -50,13 +49,6 @@ export class Context {
     debug.env('root', root)
     this.root = root
     this.options = resolveOptions(this.rawOptions, this.root)
-    this.setDefaults()
-  }
-
-  setDefaults() {
-    const defaults = this.options.defaults
-    if (defaults && defaults.length)
-      this.addComponents(defaults)
   }
 
   setTransformer(name: Options['transformer']) {
@@ -205,7 +197,10 @@ export class Context {
   }
 
   private updateComponentNameMap() {
-    this._componentNameMap = {}
+    const defaultMaps = this.options.defaultsMap ?? {}
+    this._componentNameMap = {
+      ...defaultMaps,
+    }
 
     Array
       .from(this._componentPaths)

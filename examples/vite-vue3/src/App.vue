@@ -22,6 +22,7 @@ const radio = ref('1')
     <component-b msg="b" />
     <ComponentC msg="c" />
     <ComponentD />
+    <TestComp />
     <h3>Recursive Components</h3>
     <recursive :data="tree" />
   </div>

@@ -1,9 +1,9 @@
 import path from 'node:path'
 import type { UserConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
-import Components from 'unplugin-vue-components/vite'
-import { VantResolver } from 'unplugin-vue-components/resolvers'
-import Markdown from 'vite-plugin-vue-markdown'
+import Components from '@pennajs/unplugin-vue-components/vite'
+import { VantResolver } from '@pennajs/unplugin-vue-components/resolvers'
+import Markdown from 'unplugin-vue-markdown/vite'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import Inspect from 'vite-plugin-inspect'
@@ -18,7 +18,7 @@ const config: UserConfig = {
     Vue({
       include: [/\.vue$/, /\.md$/],
     }),
-    Markdown(),
+    Markdown({}),
     Icons(),
     Inspect(),
     Components({
@@ -37,6 +37,12 @@ const config: UserConfig = {
           componentPrefix: 'i',
         }),
       ],
+      defaultsMap: {
+        TestComp: {
+          from: path.resolve(__dirname, 'src/TestComp.vue').replaceAll('\\', '/'),
+          as: 'TestComp',
+        },
+      },
     }),
   ],
   build: {

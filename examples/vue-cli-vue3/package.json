@@ -13,9 +13,9 @@
   },
   "devDependencies": {
     "@babel/core": "^7.24.5",
+    "@pennajs/unplugin-vue-components": "workspace:*",
     "@vue/cli-plugin-babel": "~5.0.8",
-    "@vue/cli-service": "~5.0.8",
-    "unplugin-vue-components": "workspace:*"
+    "@vue/cli-service": "~5.0.8"
   },
   "browserslist": [
     "> 1%",

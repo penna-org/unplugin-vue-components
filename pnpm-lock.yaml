@@ -112,15 +112,15 @@ importers:
         specifier: ^2.7.16
         version: 2.7.16
     devDependencies:
+      '@pennajs/unplugin-vue-components':
+        specifier: workspace:*
+        version: link:../..
       '@vitejs/plugin-vue2':
         specifier: ^2.3.1
         version: 2.3.1(vite@5.2.10(@types/node@20.12.7)(terser@5.12.0))(vue@2.7.16)
       cross-env:
         specifier: ^7.0.3
         version: 7.0.3
-      unplugin-vue-components:
-        specifier: workspace:*
-        version: link:../..
       vite:
         specifier: ^5.2.10
         version: 5.2.10(@types/node@20.12.7)(terser@5.12.0)
@@ -134,6 +134,9 @@ importers:
       '@iconify/json':
         specifier: ^2.2.205
         version: 2.2.205
+      '@pennajs/unplugin-vue-components':
+        specifier: workspace:*
+        version: link:../..
       '@vitejs/plugin-vue':
         specifier: ^5.0.4
         version: 5.0.4(vite@5.2.10(@types/node@20.12.7)(terser@5.12.0))(vue@3.4.26(typescript@5.4.5))
@@ -152,9 +155,6 @@ importers:
       unplugin-icons:
         specifier: ^0.18.5
         version: 0.18.5(@vue/compiler-sfc@3.4.26)(vue-template-es2015-compiler@1.9.1)
-      unplugin-vue-components:
-        specifier: workspace:*
-        version: link:../..
       unplugin-vue-markdown:
         specifier: ^0.26.2
         version: 0.26.2(rollup@4.17.2)(vite@5.2.10(@types/node@20.12.7)(terser@5.12.0))
@@ -180,6 +180,9 @@ importers:
         specifier: ^3.4.26
         version: 3.4.26(typescript@5.4.5)
     devDependencies:
+      '@pennajs/unplugin-vue-components':
+        specifier: workspace:*
+        version: link:../..
       '@vue/cli-plugin-babel':
         specifier: ^5.0.8
         version: 5.0.8(@vue/cli-service@5.0.8(@vue/compiler-sfc@3.4.26)(esbuild@0.19.12)(lodash@4.17.21)(webpack-sources@3.2.3))(core-js@3.37.0)(esbuild@0.19.12)(vue@3.4.26(typescript@5.4.5))
@@ -195,9 +198,6 @@ importers:
       unplugin-icons:
         specifier: ^0.18.5
         version: 0.18.5(@vue/compiler-sfc@3.4.26)(vue-template-es2015-compiler@1.9.1)
-      unplugin-vue-components:
-        specifier: workspace:*
-        version: link:../..
       unplugin-vue2-script-setup:
         specifier: ^0.11.4
         version: 0.11.4(@vue/composition-api@1.7.2(vue@3.4.26(typescript@5.4.5)))(@vue/runtime-dom@3.4.26)(rollup@4.17.2)
@@ -214,15 +214,15 @@ importers:
       '@babel/core':
         specifier: ^7.24.5
         version: 7.24.5
+      '@pennajs/unplugin-vue-components':
+        specifier: workspace:*
+        version: link:../..
       '@vue/cli-plugin-babel':
         specifier: ~5.0.8
         version: 5.0.8(@vue/cli-service@5.0.8(@vue/compiler-sfc@3.4.26)(esbuild@0.19.12)(lodash@4.17.21)(webpack-sources@3.2.3))(core-js@3.37.0)(esbuild@0.19.12)(vue@3.4.26(typescript@5.4.5))
       '@vue/cli-service':
         specifier: ~5.0.8
         version: 5.0.8(@vue/compiler-sfc@3.4.26)(esbuild@0.19.12)(lodash@4.17.21)(webpack-sources@3.2.3)
-      unplugin-vue-components:
-        specifier: workspace:*
-        version: link:../..
 
 packages:
 
