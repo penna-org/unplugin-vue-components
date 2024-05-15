@@ -76,7 +76,10 @@ export interface Options {
    * @default 'src/components'
    */
   dirs?: string | string[]
-
+  /**
+   * Defaults components files paths
+   */
+  defaults?: string[]
   /**
    * Valid file extensions for components.
    * @default ['vue']

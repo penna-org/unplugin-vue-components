@@ -1,5 +1,5 @@
 {
-  "name": "unplugin-vue-components",
+  "name": "@pennajs/unplugin-vue-components",
   "type": "module",
   "version": "0.27.0",
   "packageManager": "pnpm@9.0.6",
@@ -8,6 +8,9 @@
   "license": "MIT",
   "funding": "https://github.com/sponsors/antfu",
   "homepage": "https://github.com/unplugin/unplugin-vue-components#readme",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/unplugin/unplugin-vue-components.git"
