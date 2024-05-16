@@ -41,6 +41,16 @@ export class Context {
     this.options = resolveOptions(rawOptions, this.root)
     this.generateDeclaration = throttle(500, this._generateDeclaration.bind(this), { noLeading: false })
     this.setTransformer(this.options.transformer)
+    this._init()
+  }
+
+  _init() {
+    if (this.options.defaultsMap && Object.keys(this.options.defaultsMap).length) {
+      this._componentNameMap = {
+        ...this.options.defaultsMap,
+      }
+      this._generateDeclaration()
+    }
   }
 
   setRoot(root: string) {
@@ -49,6 +59,7 @@ export class Context {
     debug.env('root', root)
     this.root = root
     this.options = resolveOptions(this.rawOptions, this.root)
+    this._init()
   }
 
   setTransformer(name: Options['transformer']) {
